@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greeting Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Greeting Card Creator</h1>
+    <form id="cardForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="occasion" placeholder="Occasion (e.g., Birthday)" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Generate Card</button>
+    </form>
+    <div id="cardOutput" class="card" style="display:none;">
+      <h2 id="cardOccasion"></h2>
+      <p id="cardMessage"></p>
+      <h3 id="cardName"></h3>
+      <button id="downloadBtn">Download Card</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</body>
+</html>
