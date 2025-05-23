@@ -47,10 +47,6 @@ function startTimer() {
     } else {
       clearInterval(timer);
       isRunning = false;
-
-      // Optional sound alert
-      // new Audio("alert.mp3").play();
-
       alert(isWorkMode ? "Work time is over! Take a break." : "Break time is over! Back to work.");
     }
   }, 1000);
@@ -67,12 +63,10 @@ function resetTimer() {
   updateTimerDisplay();
 }
 
-// Event Listeners
 startBtn.addEventListener("click", startTimer);
 stopBtn.addEventListener("click", stopTimer);
 resetBtn.addEventListener("click", resetTimer);
 workModeBtn.addEventListener("click", () => toggleMode(true));
 breakModeBtn.addEventListener("click", () => toggleMode(false));
 
-// Initialize display
 updateTimerDisplay();
